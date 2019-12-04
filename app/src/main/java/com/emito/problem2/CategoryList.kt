@@ -44,6 +44,7 @@ class CategoryList : AppCompatActivity() {
         setContentView(R.layout.activity_category_list)
         val intent=getIntent()
         val selectedCategory=intent.getStringExtra("Category")
+        tvCategoryList.text="List of $selectedCategory"
         val adapter=ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,
             when(selectedCategory){
                 "Food"->foodCategory
